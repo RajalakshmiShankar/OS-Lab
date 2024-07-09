@@ -1,4 +1,4 @@
-  #include<stdio.h>
+#include<stdio.h>
 
 void FF() {
     int bsize[10], psize[10], bno, pno, flags[10], allocation[10], i, j;
@@ -18,7 +18,7 @@ void FF() {
     for(i = 0; i < pno; i++)
         scanf("%d", &psize[i]);
     for(i = 0; i < pno; i++) {
-        for(j = 0; j < bno; j++) {
+        for(j = 0; j < bno; j++) {  
             if(bsize[j] >= psize[i]) {
                 allocation[i] = j;
                 bsize[j] -= psize[i];

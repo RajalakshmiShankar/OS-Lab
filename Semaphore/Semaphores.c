@@ -39,20 +39,20 @@ void consumer()
 
 int main()
 {
-    int n, i;
+    int ch, i;
     printf("\n1. Press 1 for Producer"
            "\n2. Press 2 for Consumer"
            "\n3. Press 3 for Exit");
 
 
 
-    for (i = 1; i > 0; i++) {
+    do {
 
         printf("\nEnter your choice:");
-        scanf("%d", &n);
+        scanf("%d", &ch);
 
 
-        switch (n) {
+        switch (ch) {
         case 1:
 
 
@@ -88,5 +88,5 @@ int main()
             exit(0);
             break;
         }
-    }
+    }while(ch!=3);
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h> // For INT_MAX
 
-void priorityScheduling(int n, int p[], int bt[], int at[], int priority[], int rt_b[]);
+void priorityScheduling(int n, int p[], int bt[], int at[], int priority[], int rt_b[]); 
 
 int main() {
     int p[100], a[100], b[100], priority[100],rt_b[100];
