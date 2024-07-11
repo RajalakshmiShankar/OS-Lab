@@ -12,7 +12,7 @@
 //void BurstTime
 
 int main()   {
-    int p[100],a[100],b[100],c[100],t[100],w[100],i,num;
+    int p[100],a[100],b[100],c[100],t[100],w[100],i,num,j;
     printf("Enter number of processes: ");
     scanf("%d",&num);
     
@@ -33,7 +33,26 @@ int main()   {
     for( i = 0; i < num ; i++ )   {
         scanf("%d",&b[i]);
     }
-
+    for (int i = 0; i < num - 1; i++) {
+        for (int j = 0; j < num - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                // Swap arrival times
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+                
+                // Swap burst times
+                temp = b[j];
+                b[j] = b[j + 1];
+                b[j + 1] = temp;
+                
+                // Swap process IDs
+                temp = p[j];
+                p[j] = p[j + 1];
+                p[j + 1] = temp;
+            }
+        }
+    }
     //Completion Time
     c[0] = b[0] + a[0];
     //printf("%d\n",c[0]);
@@ -55,7 +74,7 @@ int main()   {
     //Table
     printf("Process\tArrival Time  Burst Time  Completion Time  TAT  Waiting Time\n");
     for( i = 0; i < num ; i++ )   {
-        printf("   %d\t",p[i]);
+        printf("  P%d\t",p[i]);
         printf("     %d\t",a[i]);
         printf("           %d\t",b[i]);
         printf("          %d\t",c[i]);
