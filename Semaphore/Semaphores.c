@@ -48,7 +48,7 @@ int main()
 
     do {
 
-        printf("\nEnter your choice:");
+        printf("\nEnter your Choice:");
         scanf("%d", &ch);
 
 
@@ -65,7 +65,7 @@ int main()
 
             else
             {
-                printf("Buffer is full!");
+                printf("Buffer is Full!");
             }
             break;
 
@@ -80,7 +80,7 @@ int main()
 
             else
             {
-                printf("Buffer is empty!");
+                printf("Buffer is Empty!");
             }
             break;
 
