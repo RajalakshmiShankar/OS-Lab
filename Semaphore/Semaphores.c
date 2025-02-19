@@ -15,7 +15,7 @@ void producer()
 
     x++;
 
-    printf("\nProducer produces "
+    printf("\nProducer Produces "
            "item %d",x);
 
     ++mutex;
@@ -30,7 +30,7 @@ void consumer()
 
     ++empty;
 
-    printf("\nConsumer consumes "
+    printf("\nConsumer Consumes "
            "item %d",x);
      x--;
 
@@ -48,7 +48,7 @@ int main()
 
     do {
 
-        printf("\nEnter your Choice:");
+        printf("\nEnter Your Choice:");
         scanf("%d", &ch);
 
 
