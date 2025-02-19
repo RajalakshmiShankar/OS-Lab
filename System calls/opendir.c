@@ -9,7 +9,7 @@ void main() {
     printf("Enter directory name: "); 
     scanf("%s",buff);
     if((dirp = opendir(buff)) == NULL )   {
-        printf("Error");
+        printf("ERROR");
         exit(1);
     }
     while (dptr = readdir(dirp) )   {
